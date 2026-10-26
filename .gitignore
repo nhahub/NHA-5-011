@@ -1,0 +1,20 @@
+# raw transactions are large (do not push)
+data/raw/*
+!data/raw/.gitkeep
+
+# python / notebooks
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# experiment tracking
+mlruns/
+mlflow.db
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

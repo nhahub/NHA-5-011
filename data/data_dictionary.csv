@@ -1,0 +1,27 @@
+Feature_Name,Role,Data_Type,Value_Range,Description
+Customer ID,Identifier,int64,[12346.00 to 18287.00],Unique customer identifier from Online Retail II
+snapshot,Temporal Metadata,str,5 unique,Quarterly observation date (t) at which features are computed
+split,Temporal Metadata,str,2 unique,Pre-assigned split indicator (train / test)
+recency,Continuous Feature,float64,[0.17 to 646.55],Days elapsed since customer last purchase prior to snapshot date
+frequency,Continuous Feature,int64,[1.00 to 284.00],Total number of valid historical orders prior to snapshot date
+monetary,Continuous Feature,float64,[1.55 to 456780.49],Total monetary value spent by customer prior to snapshot date
+avg_order_value,Continuous Feature,float64,[1.55 to 25784.32],Average spend per purchase transaction
+std_order_value,Continuous Feature,float64,[0.00 to 44513.12],Standard deviation of order values (0 for single orders)
+tenure,Continuous Feature,float64,[0.30 to 646.68],Days elapsed since customer first observed purchase
+avg_days_between_orders,Continuous Feature,float64,[0.00 to 632.12],Average gap in days between consecutive orders
+std_days_between_orders,Continuous Feature,float64,[0.00 to 440.49],Standard deviation of order intervals
+recency_to_gap_ratio,Continuous Feature,float64,[0.00 to 646.45],Ratio of current recency to average inter-purchase gap
+is_single_order,Binary Feature,int64,[0.00 to 1.00],"Binary flag: 1 if customer made only 1 order historically, else 0"
+n_unique_products,Continuous Feature,int64,[1.00 to 2178.00],Count of distinct product stock codes purchased
+avg_basket_size,Continuous Feature,float64,[1.00 to 87167.00],Average number of product units per order
+avg_unit_price,Continuous Feature,float64,[0.15 to 434.65],Average price per unit across purchased items
+return_rate,Continuous Feature,float64,[0.00 to 1.00],Proportion of returned/cancelled items relative to total units
+orders_last_30d,Continuous Feature,float64,[0.00 to 34.00],Number of purchases made in the 30 days prior to snapshot
+orders_last_60d,Continuous Feature,float64,[0.00 to 54.00],Number of purchases made in the 60 days prior to snapshot
+orders_last_90d,Continuous Feature,float64,[0.00 to 77.00],Number of purchases made in the 90 days prior to snapshot
+spend_last_90d,Continuous Feature,float64,[0.00 to 103579.50],Monetary spend in the 90 days prior to snapshot
+spend_trend,Continuous Feature,float64,[-1.00 to 1.00],Directional trend in spending (recent vs historical)
+frequency_trend,Continuous Feature,float64,[-1.00 to 1.00],Directional trend in order frequency (recent vs historical)
+is_uk,Binary Feature,int64,[0.00 to 1.00],"Binary flag: 1 if customer resides in the UK, else 0"
+weekend_share,Continuous Feature,float64,[0.00 to 1.00],Fraction of orders placed on Saturday or Sunday
+churn,Target (Label),int64,[0.00 to 1.00],"Target: 1 if zero orders in subsequent 90 days, else 0"
