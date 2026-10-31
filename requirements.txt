@@ -6,4 +6,5 @@ matplotlib
 seaborn
 shap
 mlflow
+streamlit
 jupyter
