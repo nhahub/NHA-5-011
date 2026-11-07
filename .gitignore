@@ -18,3 +18,8 @@ mlflow.db
 .DS_Store
 .idea/
 .vscode/
+# deep learning local runs (not uploaded)
+deep learning/results/dryrun/
+deep learning/figures/dryrun/
+deep learning/results/run_*.log
+.venv-dl/

@@ -1,0 +1,6 @@
+cluster,cluster_name,size,recency,frequency,monetary,avg_order_value,avg_days_between_orders,n_unique_products,return_rate,weekend_share,spend_trend,churn_rate,pct_of_customers
+0,Weekend Shoppers (Lapsing),493,298.405,2.0,397.76,215.44,67.317,31.0,0.017,0.884,-0.034,0.692,9.4
+1,At-Risk Occasionals,1616,176.46,3.0,973.795,317.898,81.221,49.0,0.02,0.061,-0.412,0.598,30.8
+2,One-Time Lapsed,1349,352.615,1.0,227.87,169.205,67.317,14.0,0.034,0.01,-0.064,0.833,25.7
+3,Loyal Champions,1068,32.462,12.0,4621.6,372.112,39.404,155.0,0.025,0.145,-0.042,0.19,20.3
+4,New / Rising Customers,727,36.584,3.0,795.83,267.827,84.016,38.0,0.015,0.087,0.922,0.469,13.8

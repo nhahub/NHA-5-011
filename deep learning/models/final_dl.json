@@ -1,0 +1,33 @@
+{
+  "family": "ftt",
+  "config": {
+    "hidden": 64,
+    "dropout": 0.1,
+    "d_token": 48,
+    "n_layers": 2,
+    "n_heads": 4,
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "batch": 512,
+    "pos_weight": 1.5
+  },
+  "threshold": 0.5799999999999997,
+  "matched_recall_threshold": 0.5499999999999998,
+  "preprocessor": "preprocessor.joblib",
+  "refit_on": "full_train",
+  "val_metrics": {
+    "threshold": 0.5799999999999997,
+    "accuracy": 0.7860756931795183,
+    "precision": 0.7920286152273889,
+    "recall": 0.9273107986838169,
+    "f1": 0.8543475265261127,
+    "roc_auc": 0.8240803172676585,
+    "pr_auc": 0.893992848872044,
+    "brier": 0.15331092154477244,
+    "tn": 784,
+    "fp": 814,
+    "fn": 243,
+    "tp": 3100,
+    "predicted_positive_share": 0.7921473385954261
+  }
+}

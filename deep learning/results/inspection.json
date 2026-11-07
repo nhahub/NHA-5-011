@@ -1,0 +1,521 @@
+{
+  "rows": 22372,
+  "columns": [
+    "Customer ID",
+    "snapshot",
+    "split",
+    "recency",
+    "frequency",
+    "monetary",
+    "avg_order_value",
+    "std_order_value",
+    "tenure",
+    "avg_days_between_orders",
+    "std_days_between_orders",
+    "recency_to_gap_ratio",
+    "is_single_order",
+    "n_unique_products",
+    "avg_basket_size",
+    "avg_unit_price",
+    "return_rate",
+    "orders_last_30d",
+    "orders_last_60d",
+    "orders_last_90d",
+    "spend_last_90d",
+    "spend_trend",
+    "frequency_trend",
+    "is_uk",
+    "weekend_share",
+    "churn"
+  ],
+  "dtypes": {
+    "Customer ID": "int64",
+    "snapshot": "datetime64[us]",
+    "split": "str",
+    "recency": "float64",
+    "frequency": "int64",
+    "monetary": "float64",
+    "avg_order_value": "float64",
+    "std_order_value": "float64",
+    "tenure": "float64",
+    "avg_days_between_orders": "float64",
+    "std_days_between_orders": "float64",
+    "recency_to_gap_ratio": "float64",
+    "is_single_order": "int64",
+    "n_unique_products": "int64",
+    "avg_basket_size": "float64",
+    "avg_unit_price": "float64",
+    "return_rate": "float64",
+    "orders_last_30d": "int64",
+    "orders_last_60d": "int64",
+    "orders_last_90d": "int64",
+    "spend_last_90d": "float64",
+    "spend_trend": "float64",
+    "frequency_trend": "float64",
+    "is_uk": "int64",
+    "weekend_share": "float64",
+    "churn": "int64"
+  },
+  "missing": {},
+  "exact_duplicate_rows": 0,
+  "duplicate_customer_snapshot": 0,
+  "features": [
+    "recency",
+    "frequency",
+    "monetary",
+    "avg_order_value",
+    "std_order_value",
+    "tenure",
+    "avg_days_between_orders",
+    "std_days_between_orders",
+    "recency_to_gap_ratio",
+    "is_single_order",
+    "n_unique_products",
+    "avg_basket_size",
+    "avg_unit_price",
+    "return_rate",
+    "orders_last_30d",
+    "orders_last_60d",
+    "orders_last_90d",
+    "spend_last_90d",
+    "spend_trend",
+    "frequency_trend",
+    "is_uk",
+    "weekend_share"
+  ],
+  "n_features": 22,
+  "split_column_raw_values": [
+    "test",
+    "train"
+  ],
+  "validation_derived": true,
+  "validation_snapshot": "2011-06-09",
+  "target": {
+    "mean": 0.6100482746290006,
+    "counts": {
+      "0": 8724,
+      "1": 13648
+    }
+  },
+  "splits": [
+    {
+      "split": "test",
+      "snapshot": "2011-09-09",
+      "rows": 5253,
+      "churn": 0.5663430420711975,
+      "customers": 5253
+    },
+    {
+      "split": "train",
+      "snapshot": "2010-09-09",
+      "rows": 3337,
+      "churn": 0.42163620017980225,
+      "customers": 3337
+    },
+    {
+      "split": "train",
+      "snapshot": "2010-12-09",
+      "rows": 4282,
+      "churn": 0.6891639420831387,
+      "customers": 4282
+    },
+    {
+      "split": "train",
+      "snapshot": "2011-03-09",
+      "rows": 4559,
+      "churn": 0.6518973459091906,
+      "customers": 4559
+    },
+    {
+      "split": "val",
+      "snapshot": "2011-06-09",
+      "rows": 4941,
+      "churn": 0.6765836875126493,
+      "customers": 4941
+    }
+  ],
+  "snapshot_split_consistency": true,
+  "customer_overlap_counts": {
+    "train&train": 4559,
+    "train&val": 4559,
+    "train&test": 4559,
+    "val&train": 4559,
+    "val&val": 4941,
+    "val&test": 4941,
+    "test&train": 4559,
+    "test&val": 4941,
+    "test&test": 5253
+  },
+  "unique_customers_total": 5253,
+  "test_customers_seen_in_train_or_val": 4941,
+  "test_customers_seen_share": 0.9406053683609366,
+  "customers_with_multiple_rows": 4941,
+  "rows_per_customer_max": 5,
+  "feature_profile": [
+    {
+      "feature": "recency",
+      "min": 0.168055556,
+      "max": 646.5493056,
+      "mean": 145.7391424918503,
+      "median": 103.4652778,
+      "std": 137.91917380812077,
+      "skew": 1.1692619933903239,
+      "zero_share": 0.0,
+      "unique": 20540,
+      "corr_with_churn": 0.34281922230446393
+    },
+    {
+      "feature": "frequency",
+      "min": 1.0,
+      "max": 284.0,
+      "mean": 4.866082603254068,
+      "median": 2.0,
+      "std": 9.236696426832987,
+      "skew": 10.526135498567042,
+      "zero_share": 0.0,
+      "unique": 123,
+      "corr_with_churn": -0.2773833066599391
+    },
+    {
+      "feature": "monetary",
+      "min": 1.55,
+      "max": 456780.49,
+      "mean": 2216.7688668871806,
+      "median": 705.125,
+      "std": 10047.838928321775,
+      "skew": 24.619420914261998,
+      "zero_share": 0.0,
+      "unique": 11444,
+      "corr_with_churn": -0.1479578262354841
+    },
+    {
+      "feature": "avg_order_value",
+      "min": 1.55,
+      "max": 25784.32,
+      "mean": 371.5653315351216,
+      "median": 280.865,
+      "std": 577.8354011606692,
+      "skew": 19.65536117914589,
+      "zero_share": 0.0,
+      "unique": 11423,
+      "corr_with_churn": -0.048515018798838745
+    },
+    {
+      "feature": "std_order_value",
+      "min": 0.0,
+      "max": 44513.11952,
+      "mean": 145.03723980866945,
+      "median": 64.0577911,
+      "std": 635.7236994428564,
+      "skew": 49.47297667110052,
+      "zero_share": 0.32866976577865187,
+      "unique": 9043,
+      "corr_with_churn": -0.07132439405646827
+    },
+    {
+      "feature": "tenure",
+      "min": 0.3,
+      "max": 646.6770833,
+      "mean": 311.7773992040457,
+      "median": 301.5628472,
+      "std": 168.10714738842393,
+      "skew": 0.12195220252038491,
+      "zero_share": 0.0,
+      "unique": 21315,
+      "corr_with_churn": -0.07263749998178087
+    },
+    {
+      "feature": "avg_days_between_orders",
+      "min": 0.000694444,
+      "max": 632.1201389,
+      "mean": 71.27785322505409,
+      "median": 56.27202381,
+      "std": 57.99368991938863,
+      "skew": 2.780405569625081,
+      "zero_share": 0.0,
+      "unique": 8992,
+      "corr_with_churn": 0.1319844843720183
+    },
+    {
+      "feature": "std_days_between_orders",
+      "min": 0.0,
+      "max": 440.4926604,
+      "mean": 24.034338938508313,
+      "median": 0.0,
+      "std": 38.19902015674821,
+      "skew": 2.433643917731433,
+      "zero_share": 0.5059449311639549,
+      "unique": 7341,
+      "corr_with_churn": -0.1040422263271428
+    },
+    {
+      "feature": "recency_to_gap_ratio",
+      "min": 0.001414825,
+      "max": 646.4493056,
+      "mean": 6.7676591031712405,
+      "median": 1.6070266544999998,
+      "std": 34.51194980662408,
+      "skew": 10.662420917541494,
+      "zero_share": 0.0,
+      "unique": 22343,
+      "corr_with_churn": 0.07338455873110745
+    },
+    {
+      "feature": "is_single_order",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.32728410513141426,
+      "median": 0.0,
+      "std": 0.4692324172350868,
+      "skew": 0.7362293408001876,
+      "zero_share": 0.6727158948685857,
+      "unique": 2,
+      "corr_with_churn": 0.28812973379053936
+    },
+    {
+      "feature": "n_unique_products",
+      "min": 1.0,
+      "max": 2178.0,
+      "mean": 66.96209547648847,
+      "median": 38.0,
+      "std": 92.80466918600726,
+      "skew": 6.169191316080584,
+      "zero_share": 0.0,
+      "unique": 550,
+      "corr_with_churn": -0.2918099851586045
+    },
+    {
+      "feature": "avg_basket_size",
+      "min": 1.0,
+      "max": 87167.0,
+      "mean": 254.17948369015838,
+      "median": 149.7738095,
+      "std": 1455.7455144617231,
+      "skew": 45.99573090699271,
+      "zero_share": 0.0,
+      "unique": 5626,
+      "corr_with_churn": -0.0007124848030129131
+    },
+    {
+      "feature": "avg_unit_price",
+      "min": 0.151333333,
+      "max": 434.65,
+      "mean": 3.4391639928090467,
+      "median": 2.913636364,
+      "std": 6.001304724983137,
+      "skew": 39.395129336966825,
+      "zero_share": 0.0,
+      "unique": 11179,
+      "corr_with_churn": 0.026213735748757475
+    },
+    {
+      "feature": "return_rate",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.02418269208421241,
+      "median": 0.0,
+      "std": 0.08617161997378056,
+      "skew": 7.859301823935784,
+      "zero_share": 0.6039692472733774,
+      "unique": 5716,
+      "corr_with_churn": 0.021368285780462615
+    },
+    {
+      "feature": "orders_last_30d",
+      "min": 0.0,
+      "max": 34.0,
+      "mean": 0.35209190059002327,
+      "median": 0.0,
+      "std": 0.9189002318984969,
+      "skew": 9.512510783260627,
+      "zero_share": 0.7659127480779546,
+      "unique": 19,
+      "corr_with_churn": -0.24239177448776184
+    },
+    {
+      "feature": "orders_last_60d",
+      "min": 0.0,
+      "max": 54.0,
+      "mean": 0.6638655462184874,
+      "median": 0.0,
+      "std": 1.486341626381493,
+      "skew": 9.565091090618457,
+      "zero_share": 0.6322635437153585,
+      "unique": 31,
+      "corr_with_churn": -0.28526295749715
+    },
+    {
+      "feature": "orders_last_90d",
+      "min": 0.0,
+      "max": 77.0,
+      "mean": 0.9565081351689612,
+      "median": 0.0,
+      "std": 2.088137537894299,
+      "skew": 11.076803716392009,
+      "zero_share": 0.5435365635615949,
+      "unique": 39,
+      "corr_with_churn": -0.2932427205701107
+    },
+    {
+      "feature": "spend_last_90d",
+      "min": 0.0,
+      "max": 103579.5,
+      "mean": 433.9467575540854,
+      "median": 0.0,
+      "std": 2123.6712663857024,
+      "skew": 23.126772825201595,
+      "zero_share": 0.5435365635615949,
+      "unique": 9442,
+      "corr_with_churn": -0.1565108394206214
+    },
+    {
+      "feature": "spend_trend",
+      "min": -1.0,
+      "max": 1.0,
+      "mean": -0.01398804224123905,
+      "median": 0.0,
+      "std": 0.6751795172408787,
+      "skew": 0.03240616117188513,
+      "zero_share": 0.329608439120329,
+      "unique": 5539,
+      "corr_with_churn": -0.032342759868476
+    },
+    {
+      "feature": "frequency_trend",
+      "min": -1.0,
+      "max": 1.0,
+      "mean": -0.008600816598560703,
+      "median": 0.0,
+      "std": 0.6670874225540904,
+      "skew": 0.014636735048126407,
+      "zero_share": 0.4214643304130163,
+      "unique": 160,
+      "corr_with_churn": -0.03639585503383307
+    },
+    {
+      "feature": "is_uk",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.9188271053102092,
+      "median": 1.0,
+      "std": 0.2731065539495001,
+      "skew": -3.0674075351194015,
+      "zero_share": 0.0811728946897908,
+      "unique": 2,
+      "corr_with_churn": 0.02411003925908738
+    },
+    {
+      "feature": "weekend_share",
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.1494343153235294,
+      "median": 0.0,
+      "std": 0.28857364288143655,
+      "skew": 2.014969728631319,
+      "zero_share": 0.6690952976935455,
+      "unique": 2942,
+      "corr_with_churn": -0.008436877149281645
+    }
+  ],
+  "low_variance_features": [
+    "is_single_order",
+    "is_uk"
+  ],
+  "model_package": {
+    "type": "RandomForestClassifier",
+    "params": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": 8,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 20,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 100,
+      "n_jobs": -1,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "threshold": 0.45,
+    "n_features": 22,
+    "feature_order_matches_dataset": true,
+    "positive_class": 1
+  },
+  "recorded_baseline": {
+    "created": "2026-11-02T22:03:37",
+    "model": "RandomForestClassifier saved package",
+    "threshold": 0.45,
+    "features": 22,
+    "test": {
+      "threshold": 0.45,
+      "accuracy": 0.6994098610317914,
+      "precision": 0.6620241411327762,
+      "recall": 0.958655462184874,
+      "f1": 0.783193738843883,
+      "pr_auc": 0.8223503458215982,
+      "roc_auc": 0.8010424889885717,
+      "brier": 0.19171685552071582,
+      "tn": 822,
+      "fp": 1456,
+      "fn": 123,
+      "tp": 2852,
+      "predicted_positive_share": 0.8201027984009137
+    },
+    "expected": {
+      "accuracy": 0.6994,
+      "f1": 0.7832,
+      "pr_auc": 0.8224
+    },
+    "reproduced": true
+  },
+  "leakage_checks": [
+    {
+      "check": "target not in features",
+      "passed": true
+    },
+    {
+      "check": "identifiers not in features",
+      "passed": true
+    },
+    {
+      "check": "snapshot belongs to one split",
+      "passed": true
+    },
+    {
+      "check": "no duplicate (customer, snapshot)",
+      "passed": true
+    },
+    {
+      "check": "label is binary",
+      "passed": true
+    },
+    {
+      "check": "train < val < test in time",
+      "passed": true
+    }
+  ],
+  "split_dates": {
+    "test": {
+      "min": "2011-09-09",
+      "max": "2011-09-09"
+    },
+    "train": {
+      "min": "2010-09-09",
+      "max": "2011-03-09"
+    },
+    "val": {
+      "min": "2011-06-09",
+      "max": "2011-06-09"
+    }
+  },
+  "train_val_gap_days": 92,
+  "val_test_gap_days": 92
+}
