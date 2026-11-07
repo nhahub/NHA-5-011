@@ -225,5 +225,5 @@ $py = "python"   # environment with torch + pytorch-tabnet
 ```
 
 Test-set accesses are logged in `results/test_access_log.md`. Nothing outside this folder was
-modified; `churn_dataset.csv` here is byte-identical to `data/processed/churn_dataset.csv`
-(SHA256 `9E34039A…`).
+modified; `churn_dataset.csv` here is a semicolon-separated copy of
+`data/processed/churn_dataset.csv` (same rows and values; only the separator differs).

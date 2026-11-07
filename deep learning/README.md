@@ -90,7 +90,8 @@ python src\final_eval.py                   # single test-set run
 
 ## Data and leakage rules
 
-- The local `churn_dataset.csv` is byte-identical to `data/processed/churn_dataset.csv`.
+- The local `churn_dataset.csv` is a semicolon-separated copy of `data/processed/churn_dataset.csv`
+  (same rows and values; only the separator differs).
 - The project dataset, models and code are treated as read-only. Nothing outside this folder is
   written.
 - The Random Forest is loaded only to score the same rows and is never retrained here.

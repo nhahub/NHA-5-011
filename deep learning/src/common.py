@@ -2,7 +2,7 @@
 """Shared utilities: paths, data loading, metrics, thresholds, reproducibility.
 
 Everything here is read-only with respect to the CIRP project: the dataset copy in
-`deep learning/` is byte-identical to data/processed/churn_dataset.csv, and the saved
+`deep learning/` is a semicolon-separated copy of data/processed/churn_dataset.csv, and the saved
 Random Forest is loaded only to score the same test rows.
 """
 from __future__ import annotations
